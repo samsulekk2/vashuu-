@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#FFC0CB">
+    <title>This is For Vashuu 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+    <!-- Screen 1: Landing (Welcome + Optional Login) -->
+    <div id="screen-landing" class="screen active">
+        <div class="background-gradient"></div>
+        <div id="landing-particles" class="particle-container"></div>
+        
+        <div class="landing-content">
+            <h1 class="main-title">Hey baby 💕 I made this for you</h1>
+            
+            <!-- Start Button -->
+            <button id="start-btn" class="start-button">Start here sweetie💕</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Question 1 (Date and Name) -->
+    <div id="screen-q1" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="q1-particles" class="particle-container"></div>
+        
+        <div class="question-content">
+            <h2 class="question-title">Question 1 💕</h2>
+            <p class="question-text">What is my favorite day?</p>
+            <div class="input-wrapper">
+                <input type="text" id="q1-date-input" placeholder="Your answer..." autocomplete="off">
+                <button id="q1-date-submit" class="submit-button">Submit</button>
+            </div>
+            <p id="q1-date-error" class="error-message"></p>
+            <div id="q1-message" class="question-message"></div>
+            
+            <div id="q1-name-section" style="display: none; margin-top: 20px;">
+                <p class="question-text">You are my…?</p>
+                <p class="question-hint">Hint: It starts with Q.</p>
+                <div class="input-wrapper">
+                    <input type="text" id="q1-name-input" placeholder="Your answer..." autocomplete="off">
+                    <button id="q1-name-submit" class="submit-button">Submit</button>
+                </div>
+                <p id="q1-name-error" class="error-message"></p>
+                <div id="q1-name-message" class="question-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Unlock (Celebration) -->
+    <div id="screen-unlock" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="unlock-container" class="unlock-container"></div>
+        <div id="unlock-lottie" class="lottie-container"></div>
+    </div>
+
+    <!-- Screen 4: Question 2 (Nickname) -->
+    <div id="screen-q2" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="q2-particles" class="particle-container"></div>
+        
+        <div class="question-content">
+            <h2 class="question-title">Question 2 💕</h2>
+            <p class="question-text">What happens to me when I see you, beautiful?</p>
+            <p class="question-hint">Hint: (ice on fire)</p>
+            <div class="input-wrapper">
+                <input type="text" id="q2-input" placeholder="Your answer..." autocomplete="off">
+                <button id="q2-submit" class="submit-button">Submit</button>
+            </div>
+            <p id="q2-error" class="error-message"></p>
+            <div id="q2-message" class="question-message"></div>
+            <div id="q2-lottie" class="lottie-container"></div>
+            <button id="q2-next" class="next-button" style="display: none;">Next 💖</button>
+        </div>
+    </div>
+
+    <!-- Screen 5: Question 3 (Flower Question) -->
+    <div id="screen-q3" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="q3-particles" class="particle-container"></div>
+        <div id="q3-rose" class="lottie-container"></div>
+        
+        <div class="question-content">
+            <h2 class="question-title">Question 3 💖</h2>
+            <p class="question-text">What the flower that fits ur beatuness?</p>
+            <div class="input-wrapper">
+                <input type="text" id="q3-input" placeholder="Your answer..." autocomplete="off">
+                <button id="q3-submit" class="submit-button">Submit</button>
+            </div>
+            <p id="q3-error" class="error-message"></p>
+            <div id="q3-message" class="question-message"></div>
+        </div>
+    </div>
+
+    <!-- Screen 6: Game -->
+    <div id="screen-game" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="game-particles" class="particle-container"></div>
+        
+        <div class="game-content">
+            <h2 class="game-title">Catch 10 hearts!💖</h2>
+            <div id="game-container" class="game-container">
+                <!-- Existing game will be integrated here -->
+                <div class="game-stats">
+                    <p>Hearts Caught: <span id="hearts-caught">0</span> / 10</p>
+                </div>
+                <div id="game-area" class="game-area"></div>
+            </div>
+            <div id="game-reward" class="reward-message"></div>
+            <div id="game-lottie" class="lottie-container"></div>
+        </div>
+    </div>
+
+    <!-- Screen 7: Question 4 (Spicy-Soft) -->
+    <div id="screen-q4" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="q4-particles" class="particle-container"></div>
+        <div id="q4-rose" class="lottie-container"></div>
+        
+        <div class="question-content">
+            <h2 class="question-title">Question 4 ❤️</h2>
+            <p class="question-text">Finish the sentence: I want ____ right now.</p>
+            <div class="input-wrapper">
+                <input type="text" id="q4-input" placeholder="Your answer..." autocomplete="off">
+                <button id="q4-submit" class="submit-button">Submit</button>
+            </div>
+            <p id="q4-error" class="error-message"></p>
+            <div id="q4-typewriter" class="typewriter-container"></div>
+        </div>
+    </div>
+
+    <!-- Screen 8: Final Reveal -->
+    <div id="screen-final" class="screen">
+        <div class="background-gradient animated-gradient"></div>
+        <div id="final-particles" class="particle-container"></div>
+        <div id="final-heart-pulse" class="lottie-container"></div>
+        <div id="final-squeeze-bunny" class="lottie-container"></div>
+        
+        <div class="final-content">
+            <!-- Message Modal (hidden initially) -->
+            <div id="message-modal" class="message-modal">
+                <div class="message-modal-content">
+                    <button id="close-message-btn" class="close-message-btn">✕</button>
+                    <div id="final-typewriter" class="typewriter-container"></div>
+                </div>
+            </div>
+            
+            <!-- Heart Icon with Notification -->
+            <div class="heart-message-trigger">
+                <p class="check-this-text">Check this</p>
+                <button id="heart-message-btn" class="heart-message-button">
+                    <span class="heart-icon">💖</span>
+                    <span class="notification-badge">1</span>
+                </button>
+            </div>
+            
+            <div class="final-controls">
+                <button id="final-music-btn" class="music-button">
+                    <span class="music-icon">🎵</span>
+                    <span class="music-text">Play Music</span>
+                </button>
+                <button id="final-replay-btn" class="replay-button">Replay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element -->
+    <audio id="background-music" loop preload="none" crossorigin="anonymous">
+        <source src="assets/music/this_is_for_u.mp3?v=2" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
